@@ -8,25 +8,25 @@ def verificar_forca_senha(senha):
     if len(senha) >= 8:
         pontuacao += 1
     else:
-        criterios.append("❌ A senha deve ter pelo menos 8 caracteres.")
+        criterios.append("A senha deve ter pelo menos 8 caracteres.")
 
     # Critério 2: Letras maiúsculas e minúsculas
     if re.search(r"[a-z]", senha) and re.search(r"[A-Z]", senha):
         pontuacao += 1
     else:
-        criterios.append("❌ A senha deve conter letras maiúsculas e minúsculas.")
+        criterios.append("A senha deve conter letras maiúsculas e minúsculas.")
 
     # Critério 3: Números
     if re.search(r"\d", senha):
         pontuacao += 1
     else:
-        criterios.append("❌ A senha deve conter pelo menos um número.")
+        criterios.append("A senha deve conter pelo menos um número.")
 
     # Critério 4: Caracteres especiais
     if re.search(r"[!@#$%^&*(),.?\":{}|<>]", senha):
         pontuacao += 1
     else:
-        criterios.append("❌ A senha deve conter pelo menos um caractere especial (!@#$%^&*).")
+        criterios.append("A senha deve conter pelo menos um caractere especial (!@#$%^&*).")
 
     # Avaliação final
     print("\n--- Resultado da Análise ---")
